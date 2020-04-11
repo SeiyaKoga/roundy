@@ -5,6 +5,10 @@ const Style = styled.div`
   position: absolute;
   width: 210px;
   height: 210px;
+  @media screen and (min-width: 768px) {
+    height: 310px;
+    width: 310px;
+  }
   top: -10px;
   svg path {
     opacity: 0.7;
