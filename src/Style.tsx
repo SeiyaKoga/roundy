@@ -2,7 +2,10 @@ import styled from 'styled-components';
 
 const Style = styled.div`
   display: inline-block;
-  position: relative;
+  position: absolute;
+  width: 210px;
+  height: 210px;
+  top: -10px;
   svg path {
     opacity: 0.7;
   }
