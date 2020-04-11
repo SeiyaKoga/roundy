@@ -23,11 +23,11 @@ const defaultProps: InternalRoundyProps = {
   // by default we want smooth sliding
   steps: 0,
   sliced: true,
-  strokeWidth: 35,
+  strokeWidth: 4,
   rotationOffset: 0,
   arcSize: 360,
   value: 50,
-  radius: 100,
+  radius: 105,
 };
 
 interface StateType {
@@ -75,10 +75,16 @@ function Roundy(optProps: MainRoundyProps) {
   });
 
   const bind = useDrag(({ down, xy: [x, y] }) => {
-    setValueAndAngle(x, y, !down ? newState => {
-      isDrag.current = down
-      onAfterChange && onAfterChange(newState, props);
-    } : undefined);
+    setValueAndAngle(
+      x,
+      y,
+      !down
+        ? newState => {
+            isDrag.current = down;
+            onAfterChange && onAfterChange(newState, props);
+          }
+        : undefined
+    );
   });
 
   React.useEffect(() => {
@@ -121,7 +127,7 @@ function Roundy(optProps: MainRoundyProps) {
 
   const updateOnClick = event => {
     if (isDrag.current) {
-      return
+      return;
     }
     const { clientX, clientY } = event;
     let eX = clientX,

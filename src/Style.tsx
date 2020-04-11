@@ -16,11 +16,11 @@ const Style = styled.div`
     &:after {
       content: '';
       display: block;
-      width: 30px;
-      height: 30px;
+      width: 15px;
+      height: 15px;
       border-radius: 30px;
       position: absolute;
-      right: 3px;
+      right: -5px;
       background: linear-gradient(to top, #fff, #f2f2f2);
       border: 1px solid #ccc;
       top: -10px;
