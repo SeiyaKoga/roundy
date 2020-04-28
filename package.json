@@ -26,11 +26,6 @@
     "react": ">=16",
     "styled-components": ">=5"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "tsdx lint"
-    }
-  },
   "prettier": {
     "printWidth": 80,
     "semi": true,
