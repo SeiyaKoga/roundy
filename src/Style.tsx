@@ -9,7 +9,7 @@ const Style = styled.div`
     height: 310px;
     width: 310px;
   }
-  top: -10px;
+  top: -15px;
   svg path {
     opacity: 0.7;
   }
